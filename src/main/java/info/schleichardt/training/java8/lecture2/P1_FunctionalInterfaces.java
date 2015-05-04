@@ -64,7 +64,7 @@ public class P1_FunctionalInterfaces {
         }
     }
 
-    /** Java 8 enables to use lamdba functions: */
+    /** Java 8 enables to use lambda functions: */
 
     class LambdaHashFunctionUser {
         void demo() throws Exception {
@@ -81,6 +81,19 @@ public class P1_FunctionalInterfaces {
     }
 
     class Blocks {
+        void demo() throws Exception {
+            final HashFunction hashFunction = input -> {//parenthesis
+                final MessageDigest sha12 = MessageDigest.getInstance("SHA12");
+                return sha12.digest(input.getBytes());//return statement
+            };
+            final byte[] bytes = hashFunction.hash("hello");
+        }
+    }
+
+    class MultipleParameters {
+
+
+
         void demo() throws Exception {
             final HashFunction hashFunction = input -> {//parenthesis
                 final MessageDigest sha12 = MessageDigest.getInstance("SHA12");

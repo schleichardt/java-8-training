@@ -65,6 +65,8 @@ public class DefaultMethods {
     /*
      * Create a default method for {@link Container} which accepts a visitor, for example the PrintVisitor and let the visitor see every element.
      *
+     * {@code void accept(final Visitor<T> visitor)}
+     *
      */
     @LabTask
     public interface Visitor<T> {
@@ -78,8 +80,6 @@ public class DefaultMethods {
         }
     }
 
-
-
     /*
     As a result interfaces and abstract classes are kind of mixed up.
     In interface you don't have fields and cannot override the methods from Object
@@ -90,7 +90,7 @@ public class DefaultMethods {
     public interface Identifiable {
         String getId();
 
-        static Identifiable of(final String id) {//return type is interfache
+        static Identifiable of(final String id) {//return type is interface
             return new IdentifiableImpl(id);//usage of hidden impl class
         }
     }
