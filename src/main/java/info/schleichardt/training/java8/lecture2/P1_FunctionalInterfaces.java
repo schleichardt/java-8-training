@@ -66,21 +66,21 @@ public class P1_FunctionalInterfaces {
 
     /** Java 8 enables to use lambda functions: */
 
-    class LambdaHashFunctionUser {
+    static class LambdaHashFunctionUser {
         void demo() throws Exception {
             final HashFunction hashFunction = (final String input) -> MessageDigest.getInstance("SHA2").digest(input.getBytes());
             final byte[] bytes = hashFunction.hash("hello");
         }
     }
 
-    class UseInferenceAndConvention {
+    static class UseInferenceAndConvention {
         void demo() throws Exception {
             final HashFunction hashFunction = input -> MessageDigest.getInstance("SHA12").digest(input.getBytes());
             final byte[] bytes = hashFunction.hash("hello");
         }
     }
 
-    class Blocks {
+    static class Blocks {
         void demo() throws Exception {
             final HashFunction hashFunction = input -> {//parenthesis
                 final MessageDigest sha12 = MessageDigest.getInstance("SHA12");
@@ -90,16 +90,13 @@ public class P1_FunctionalInterfaces {
         }
     }
 
-    class MultipleParameters {
-
-
+    static class MultipleParameters {
+        interface Op {
+            long calculate(final long first, final long second);
+        }
 
         void demo() throws Exception {
-            final HashFunction hashFunction = input -> {//parenthesis
-                final MessageDigest sha12 = MessageDigest.getInstance("SHA12");
-                return sha12.digest(input.getBytes());//return statement
-            };
-            final byte[] bytes = hashFunction.hash("hello");
+            final Op addition = (left, right) -> left + right;
         }
     }
 }
