@@ -4,9 +4,7 @@ import info.schleichardt.training.LabTask;
 import info.schleichardt.training.Placeholders;
 import io.sphere.sdk.models.Base;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static info.schleichardt.training.Placeholders.todo;
@@ -14,6 +12,7 @@ import static java.util.Arrays.asList;
 import static org.apache.commons.lang3.StringUtils.*;
 
 public class Streams {
+    //toString, hashCode and equals are implicitly implemented
     public static class Person extends Base {
         private final String firstName;
         private final String lastName;
@@ -84,5 +83,45 @@ public class Streams {
         return todo();
     }
 
+    //it leaves out an intermediate operation
+    @LabTask
+    public static boolean anyMatchLastNameSmith(final List<Person> persons) {
+        return todo();
+    }
 
+    @LabTask
+    public static long countLastNameSmith(final List<Person> persons) {
+        return todo();
+    }
+
+    @LabTask
+    public static Optional<Person> queryOneForFirstNameLaura(final List<Person> persons) {
+        return todo();
+    }
+
+    @LabTask
+    public static Optional<Person> findPersonWithLongestLastName(final List<Person> persons) {
+        return todo();
+    }
+
+    @LabTask
+    public static List<Person> sortByLastNameAscThenFirstNameAsc(final List<Person> persons) {
+        return todo();
+    }
+
+    @LabTask
+    public static List<Person> sortByLastNameAscThenFirstNameAscButSkipFirstOneAndFetchOnly2(final List<Person> persons) {
+        return todo();
+    }
+
+    @LabTask
+    public static List<Integer> sortList(final List<Integer> list) {
+        return todo();
+    }
+
+    //create a map with the following kind of entries: "John Smith" -> toString value of Person
+    @LabTask
+    public static Map<String, String> mapCreation(final List<Person> list) {
+        return todo();
+    }
 }
