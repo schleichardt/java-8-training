@@ -1,11 +1,11 @@
-package info.schleichardt.java8training.lecture2;
+package info.schleichardt.training.java8.lecture2;
 
 import java.security.MessageDigest;
 import java.util.List;
 
 import static java.util.Arrays.asList;
 
-public class L1_FunctionalInterfaces {
+public class P1_FunctionalInterfaces {
     /*
      see https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html
 

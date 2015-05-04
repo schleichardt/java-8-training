@@ -1,4 +1,4 @@
-package info.schleichardt.java8training.lecture2;
+package info.schleichardt.training.java8.lecture2;
 
 
 import org.junit.Test;
