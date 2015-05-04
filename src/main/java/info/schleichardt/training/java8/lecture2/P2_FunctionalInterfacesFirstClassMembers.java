@@ -31,6 +31,8 @@ public class P2_FunctionalInterfacesFirstClassMembers {
 
     //example method that is not at all related to the interface HashFunction
     //but still has the same signature of taking a String as input and returning a byte array
+    //name is not important
+    //little brother of duck typing
     public static byte[] md5(final String input) throws Exception {
         return MessageDigest.getInstance("MD5").digest(input.getBytes());
     }
