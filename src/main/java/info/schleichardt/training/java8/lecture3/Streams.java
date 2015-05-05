@@ -40,7 +40,7 @@ public class Streams {
     classical way of getting a set of the last names of some persons looks like this:
      */
     public static Set<String> lastNameSet(final List<Person> persons) {
-        final Set<String> lastNames = new HashSet<>();//diamond operator is new in Java 8
+        final Set<String> lastNames = new HashSet<>();//diamond operator is new in Java 7
         for (final Person person : persons) {
             lastNames.add(person.getLastName());
         }

@@ -40,7 +40,7 @@ public class P1_FunctionalInterfaces {
      */
     class Md5HashFunction implements HashFunction {
         @Override
-        public byte[] hash(final String input)  throws Exception {
+        public byte[] hash(final String input) throws Exception {
             return MessageDigest.getInstance("MD5").digest(input.getBytes());
         }
     }
@@ -68,7 +68,7 @@ public class P1_FunctionalInterfaces {
 
     static class LambdaHashFunctionUser {
         void demo() throws Exception {
-            final HashFunction hashFunction = (final String input) -> MessageDigest.getInstance("SHA2").digest(input.getBytes());
+            final HashFunction hashFunction = (final String input) -> MessageDigest.getInstance("SHA1").digest(input.getBytes());
             final byte[] bytes = hashFunction.hash("hello");
         }
     }
