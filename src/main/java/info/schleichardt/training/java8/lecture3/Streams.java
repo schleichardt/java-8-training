@@ -1,7 +1,6 @@
 package info.schleichardt.training.java8.lecture3;
 
 import info.schleichardt.training.LabTask;
-import info.schleichardt.training.Placeholders;
 import io.sphere.sdk.models.Base;
 
 import java.util.*;
@@ -9,7 +8,6 @@ import java.util.stream.Collectors;
 
 import static info.schleichardt.training.Placeholders.todo;
 import static java.util.Arrays.asList;
-import static org.apache.commons.lang3.StringUtils.*;
 
 public class Streams {
     //toString, hashCode and equals are implicitly implemented
